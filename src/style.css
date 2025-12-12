@@ -1,0 +1,61 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Roboto+Slab:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-blue-950: #14172e;
+  --color-blue-900: #161932;
+  --color-blue-850: #18213f;
+  --color-blue-100: #d7e0ff;
+  --color-blue-50: #eff1fa;
+
+  --color-gray-400: #b8bdcb;
+  --color-gray-200: #e4e2e2;
+
+  --color-cyan-500: #70f3f8;
+  --color-red-400: #f87070;
+  --color-purple-400: #d681f8;
+
+  --background-image-main-gradient: linear-gradient(to right, #2e325a, #0f112a);
+
+  --font-kumbh: "Kumbh Sans", sans-serif;
+  --font-roboto: "Roboto Slab", serif;
+  --font-space: "Space Mono", monospace;
+
+  --text-preset-1: 100px;
+  --text-preset-1-mobile: 80px;
+
+  --text-preset-2: 16px;
+  --text-preset-2-mobile: 14px;
+
+  --text-preset-3: 14px;
+  --text-preset-3-mobile: 12px;
+
+  --text-preset-space-3: 13px;
+
+  --text-setting-1: 28px;
+  --text-setting-2: 13px;
+  --text-setting-4: 12px;
+
+  --leading-115: 1.15;
+  --leading-120: 1.2;
+  --leading-125: 1.25;
+  --leading-130: 1.3;
+  --leading-133: 1.33;
+  --leading-135: 1.35;
+  --leading-145: 1.45;
+  --leading-150: 1.5;
+  --leading-200: 2;
+
+  --tracking-minus-10: -10px;
+  --tracking-minus-5: -5px;
+  --tracking-minus-02: -0.2px;
+  --tracking-minus-025: -0.25px;
+
+  --tracking-0: 0px;
+
+  --tracking-2: 2px;
+  --tracking-25: 2.5px;
+  --tracking-5: 5px;
+  --tracking-15: 15px;
+}
