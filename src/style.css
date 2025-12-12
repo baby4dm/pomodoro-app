@@ -1,4 +1,3 @@
-
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Roboto+Slab:wght@400;700&family=Space+Mono:ital,wght@0,400;0,700&display=swap");
 @import "tailwindcss";
 
@@ -58,4 +57,26 @@
   --tracking-25: 2.5px;
   --tracking-5: 5px;
   --tracking-15: 15px;
+}
+@layer base {
+  body {
+    @apply bg-blue-850 font-kumbh min-h-screen;
+  }
+  button, li {
+    cursor: pointer;
+  }
+}
+@layer components {
+  .mode-item {
+    @apply text-blue-100 w-full h-full rounded-[27.5px] min-w-[105px] md:min-w-30 flex justify-center items-center text-preset-3-mobile md:text-preset-3 leading-125;
+  }
+  .mode-item.active {
+    @apply bg-red-400 text-blue-850;
+  }
+  .main-gradient {
+    background: linear-gradient(to left, #2e325a, #0f112a);
+  }
+  .main-shadow {
+    box-shadow: -50px -50px 100px 0 #272c5a, 50px 50px 100px 0 #121530;
+  }
 }
