@@ -76,7 +76,7 @@
 }
 @layer components {
   .mode-item {
-    @apply text-blue-100 w-full h-full font-bold rounded-[27.5px] min-w-[105px] md:min-w-30 flex justify-center items-center text-preset-3-mobile md:text-preset-3 leading-125;
+    @apply text-blue-100 w-full h-full font-bold rounded-[27.5px] min-w-[105px] md:min-w-30 flex justify-center items-center text-preset-3-mobile md:text-preset-3 leading-125 hover:text-white;
   }
   .mode-item.active {
     background-color: var(--accent-color);
@@ -91,6 +91,26 @@
   .font-selector,
   .color-selector {
     @apply w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-850 text-setting-2 font-bold leading-125;
+
+    @apply relative;
+
+    &::before {
+      content: "";
+      @apply absolute inset-0 rounded-full;
+      opacity: 0;
+      border: 1px solid grey;
+      z-index: -1;
+
+      transform: scale(0.8);
+
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.3s ease-out;
+    }
+
+    &:hover::before {
+      transform: scale(1.4);
+      opacity: 0.3;
+    }
   }
   .font-selector.active {
     @apply bg-blue-900 text-white;
@@ -109,5 +129,8 @@
   }
   .color-selector.active svg {
     opacity: 1;
+  }
+  #start-pause-btn:hover {
+    color: var(--accent-color);
   }
 }
