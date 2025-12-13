@@ -34,6 +34,7 @@
 
   --text-setting-1: 28px;
   --text-setting-2: 13px;
+  --text-setting-3: 11px;
   --text-setting-4: 12px;
 
   --leading-115: 1.15;
@@ -62,8 +63,12 @@
   body {
     @apply bg-blue-850 font-kumbh min-h-screen;
   }
-  button, li {
+  button,
+  li {
     cursor: pointer;
+  }
+  hr {
+    @apply h-px bg-gray-200 border-0;
   }
 }
 @layer components {
@@ -78,5 +83,11 @@
   }
   .main-shadow {
     box-shadow: -50px -50px 100px 0 #272c5a, 50px 50px 100px 0 #121530;
+  }
+  .font-selector {
+    @apply w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-850 text-setting-2 font-bold leading-125;
+  }
+  .font-selector.active {
+    @apply bg-blue-900 text-white;
   }
 }
