@@ -22,7 +22,7 @@
   --font-space: "Space Mono", monospace;
 
   --text-preset-1: 100px;
-  --text-preset-1-mobile: 80px;
+  --text-preset-1-mobile: 72px;
 
   --text-preset-2: 16px;
   --text-preset-2-mobile: 14px;
@@ -60,6 +60,9 @@
   --tracking-15: 15px;
 }
 @layer base {
+  :root {
+    --accent-color: #f87070;
+  }
   body {
     @apply bg-blue-850 font-kumbh min-h-screen;
   }
@@ -73,10 +76,11 @@
 }
 @layer components {
   .mode-item {
-    @apply text-blue-100 w-full h-full rounded-[27.5px] min-w-[105px] md:min-w-30 flex justify-center items-center text-preset-3-mobile md:text-preset-3 leading-125;
+    @apply text-blue-100 w-full h-full font-bold rounded-[27.5px] min-w-[105px] md:min-w-30 flex justify-center items-center text-preset-3-mobile md:text-preset-3 leading-125;
   }
   .mode-item.active {
-    @apply bg-red-400 text-blue-850;
+    background-color: var(--accent-color);
+    @apply text-blue-850;
   }
   .main-gradient {
     background: linear-gradient(to left, #2e325a, #0f112a);
@@ -84,10 +88,26 @@
   .main-shadow {
     box-shadow: -50px -50px 100px 0 #272c5a, 50px 50px 100px 0 #121530;
   }
-  .font-selector {
+  .font-selector,
+  .color-selector {
     @apply w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-850 text-setting-2 font-bold leading-125;
   }
   .font-selector.active {
     @apply bg-blue-900 text-white;
+  }
+  .menu-overlay {
+    @apply fixed inset-0 bg-black/50 z-40 opacity-0 pointer-events-none transition-opacity duration-300;
+  }
+  .accent-bg {
+    background-color: var(--accent-color);
+  }
+  .accent-stroke {
+    stroke: var(--accent-color);
+  }
+  .color-selector svg {
+    opacity: 0;
+  }
+  .color-selector.active svg {
+    opacity: 1;
   }
 }
